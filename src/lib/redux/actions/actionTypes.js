@@ -1,0 +1,4 @@
+export const FETCH_ROOMS_START = 'FETCH_ROOMS_START';
+export const FETCH_ROOMS_END = 'FETCH_ROOMS_END';
+export const FETCH_ROOMS_ERROR = 'FETCH_ROOMS_ERROR';
+export const BOOK_ROOM = 'BOOK_ROOM';

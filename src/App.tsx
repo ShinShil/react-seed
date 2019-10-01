@@ -1,25 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {Route, Switch} from 'react-router-dom';
+import Home from "./jsx/pages/home/Home";
+import About from "./jsx/pages/about/About";
+import Rooms from "./jsx/pages/rooms/Rooms";
+import Auth from "./jsx/pages/auth/Auth";
+import Navigation from "./jsx/components/navigation/Navigation";
 
-const App: React.FC = () => {
+function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="App">
+        <Navigation/>
+        <Switch>
+          <Route path="/" exact component={Home}/>
+          <Route path="/home" exact component={Home}/>
+          <Route path="/about" exact component={About}/>
+          <Route path="/rooms" exact render={(props) => <Rooms props={props} testProp={"test"}/>}/>
+          <Route path="/auth" exact component={Auth}/>
+        </Switch>
+      </div>
   );
 }
 

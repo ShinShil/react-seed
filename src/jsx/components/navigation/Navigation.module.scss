@@ -1,0 +1,28 @@
+.navbar ul {
+  text-align: left;
+  line-height: 3em;
+  margin: 0;
+  background: white;
+  li {
+    display: inline-block;
+    list-style: none;
+    margin-right: 1em;
+
+    .link {
+      color: black;
+      cursor: pointer;
+      text-decoration: none;
+
+      &:hover {
+        opacity: 0.5;
+      }
+
+      &.active {
+        font-weight: bolder;
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
